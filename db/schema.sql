@@ -1,7 +1,7 @@
 CREATE DATABASE fitness_db;
 USE fitness_db;
 
-CREATE TABLE fitness
+CREATE TABLE fitness5
 (
 	id int NOT NULL AUTO_INCREMENT,
 	date varchar(255) NOT NULL,
@@ -21,4 +21,18 @@ CREATE TABLE users
     user_Email varchar(100),
     user_password varchar(100),
     PRIMARY KEY (user_ID)
+);
+
+CREATE TABLE fitness (
+    id int NOT NULL AUTO_INCREMENT,
+    date varchar(255) NOT NULL,
+    stepCount INT(100) NOT NULL,
+    mood INT(10) NOT NULL,
+    caloriesBurned INT(10) NOT NULL,
+    hoursOfSleep INT(10) NOT NULL,
+    boolOfActive INT(10) NOT NULL,
+    weighKG INT(10) NOT NULL,
+    user_ID int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_ID) REFERENCES users(user_ID)
 );
