@@ -1,0 +1,150 @@
+body{
+    background-color: rgb(185, 203, 226);
+   }
+.create{
+   background-color: rgb(214, 202, 202);
+   background-image: url("../images/Runners.jpg");
+   background-repeat: no-repeat;
+   background-size: 100% 100%;  
+   height: 100vh;
+   box-shadow: 5px 10px 15px 15px black inset;
+}
+.navbar{
+    width: 100%;
+    font-family: 'Anton', sans-serif;
+    color: rgb(247, 239, 239);
+    padding: 25px;
+   
+}
+.track{
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    color: rgb(28, 245, 245);
+    margin-top: -200px;
+    margin-left: 35px;
+}
+.nav{
+    float: right;
+    margin-right: 35px;
+}
+a{
+   color:white;
+   text-decoration: none;
+   padding: 0 30px 0 10px;
+   font-size: 35px;
+}
+.nav-link{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:rgb(54, 80, 80);
+}
+.label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:rgb(40, 68, 68);
+}
+.made-fun{
+    margin-top: 400px;
+    margin-left: 50px;
+    font-size: 50px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.btn{
+    background: #e92a11;
+    padding: 10px;
+    color: #fff;
+    width: 380px;
+    height: 40px;
+    text-align: center;
+    font-size: 22px;
+}
+.center{
+    margin-top: -260px;
+    margin-left: 40%;
+    height: 100%;
+    color: rgb(151, 107, 107);
+    background-color: white;
+    width: 400px;
+    padding: 15px 10px 5px 10px;
+    box-shadow: 5px 10px #443d3d;
+}
+.dash{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+}
+.text{
+    width: 375px;
+}
+.password{
+    width: 375px;
+}
+.slantedDivA{
+    margin-top: 200px;
+    z-index: -1;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: rgb(70, 144, 187);
+    margin-left: 50px;
+}
+h3{
+    margin-left: 600px;
+    margin-top: -140px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}    
+.slantedDivA:after{
+    margin-right: -100px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(3deg);
+}   
+.section{
+    margin-right: 100px;
+}
+.gif{
+    margin-top: -360px;
+    margin-left: 40px;
+}
+.copy{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(48, 48, 58);
+    text-align: center;
+    padding: 35px;
+    color: white;
+    margin-top: 100px;
+}
+
+.slantedDivB{
+    margin-top: 280px;
+    z-index: -1;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: rgb(86, 122, 143);
+    margin-left: 50px;
+   
+}    
+.slantedDivB:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(6deg);
+}   
