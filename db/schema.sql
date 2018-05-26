@@ -11,7 +11,9 @@ CREATE TABLE fitness5
     hoursOfSleep INT(10) NOT NULL,
     boolOfActive INT(10) NOT NULL,
     weighKG INT(10) NOT NULL,
-	user_ID int FOREIGN KEY references users(user_ID)
+	user_ID int,
+    PRIMARY key id
+    FOREIGN KEY (user_ID) references users(user_ID)
 );
 
 CREATE TABLE users
