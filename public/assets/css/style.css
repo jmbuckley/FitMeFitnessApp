@@ -1,152 +1,56 @@
 body{
-    background-color: rgb(185, 203, 226);
-   }
-.create{
-   background-color: rgb(214, 202, 202);
-   background-image: url("../images/runners.jpg");
-   background-repeat: no-repeat;
-   background-size: 100% 100%;  
-   height: 100vh;
-   box-shadow: 5px 10px 15px 15px black inset;
-}
-.navbar{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/fitness.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: scroll;
     width: 100%;
-    font-family: 'Anton', sans-serif;
-    color: rgb(247, 239, 239);
-    padding: 25px;
-   
-}
-.track{
-    font-size: 50px;
-    font-family: 'Lobster', cursive;
-    color: rgb(10, 247, 247);
-    margin-top: -200px;
-    margin-left: 35px;
-}
-.nav{
-    float: right;
-    margin-right: 35px;
-}
-a{
-   color:white;
-   text-decoration: none;
-   padding: 0 30px 0 10px;
-   font-size: 35px;
-}
-.nav-link{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color:rgb(54, 80, 80);
-}
-.label{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color:rgb(40, 68, 68);
-}
-.made-fun{
-    margin-top: 400px;
-    margin-left: 50px;
-    font-size: 50px;
-    color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.btn{
-    background: #e92a11;
-    padding: 10px;
-    color: #fff;
-    width: 380px;
-    height: 40px;
-    text-align: center;
-    font-size: 22px;
-}
-.center{
-    margin-top: -260px;
-    margin-left: 40%;
-    height: 100%;
-    color: rgb(196, 157, 157);
-    background-color: white;
-    width: 400px;
-    padding: 15px 10px 5px 10px;
-    box-shadow: 5px 10px #443d3d;
-    border-radius: 10px;
-}
-.dash{
-    text-align: center;
-    font-family:  'Playfair Display', serif;
-    font-size: 45px;
-}
-.text{
-    width: 375px;
-}
-.password{
-    width: 375px;
-}
-.slantedDivA{
-    margin-top: 200px;
-    z-index: -1;
-    position: relative;
-    width: 100%;
-    height: 300px;
-    background: rgb(70, 144, 187);
-    margin-left: 50px;
-}
-h3{
-    margin-left: 600px;
-    margin-top: -140px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
-}    
-.slantedDivA:after{
-    margin-right: -100px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background: inherit;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform-origin: top left;
-    transform: skewY(3deg);
-}   
-.section{
-    margin-right: 100px;
-}
-.gif{
-    margin-top: -360px;
-    margin-left: 40px;
-}
-.copy{
-    width: 100%;
-    height: 45px;
-    background-color: rgb(48, 48, 58);
-    text-align: center;
-    padding: 35px;
-    color: white;
-    margin-top: 100px;
+    height: 100vh;
+    filter: blur(0px);
 }
 
-.slantedDivB{
-    margin-top: 280px;
-    z-index: -1;
+.login-page{
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+    
+}
+
+.form{
     position: relative;
+    z-index: 1;
+    background: rgba(94, 92, 92, 0.6);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    color: white
+}
+
+.form input{
+    font-family: "Roboto", sans-serif;
+    outline: 1px;
+    background-color: transparent;
+    border: 1px solid white;
     width: 100%;
-    height: 200px;
-    background: rgb(86, 122, 143);
-    margin-left: 50px;
-   
-}    
-.slantedDivB:after{
-    position: absolute;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: rgb(228, 222, 222);
+}
+.form button{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(152, 212, 154);
     width: 100%;
-    height: 100%;
-    content: '';
-    background: inherit;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform-origin: top right;
-    transform: skewY(6deg);
-}   
+    border: 0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form button:hover{
+    background: #43A047;
+}
