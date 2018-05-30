@@ -1,68 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
+    <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
-	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/assets/js/fitness.js"></script>
-    <title>FitMe</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Login</title>
 </head>
-<body> 
-<div class="create">
-    <div class="navbar">
-       <a>FitMe</a>
-       <div class="nav">   
-          <a href="" id="index">Login</a>
-          <a href="" id="index">Home</a>
-          <a href="" id="index"index>About</a>
-       </div>  
-    </div> 
- </div>
-<script>
-    function showPass()
-    {
-        var pass = document.getElementById('pass');
-        if(document.getElementById('check').checked)
-    {
-           pass.setAttribute('type', 'text');
-        }else{
-            pass.setAttribute('type', 'password')
-        }
-    }    
-</script>
-
-<div class="track">
-    Fitness Tracking Made Fun
-</div>
-<section class="section">
- <div class="slantedDivA"></div>  
-   <div class="center">
-      <h1 class="dash">Dashboard</h1>
-      <p><input class="text" placeholder="Email or Phone Number" /></p>
-      <input type="password" id="pass"/>
-      <input type="checkbox" id="check" onclick="showPass();"/>Show Password
-      <p><input type="checkbox" />Forget password</p>
-      <button class="btn btn-login">Login with Gmail</button>
-      <p><input type="checkbox" />Keep me Logged in</p>
-   </div>  
-</section>
-
-<div class="slantedDivB"></div>
-<h3>You can use the application to track your moves on a daily basis.</h3>
-<img class="gif" src="assets/images/runningman.gif" alt="" style="width: 470px; height: 410px;">     
-     
-
-<Footer>
-  <div class="copy">
-    &copyFitMe 2018,
-    Justin Incorporated,
-    Amjad Industries,
-    Andre LLC. 2018
-  </div>
-</Footer>
+<body>
+    <form class="login-page">
+        <div class="form">
+            <input type="text" placeholder="username" name="userid"/>
+            <input type="text" placeholder="password" name="paswrd"/>
+            <input class="text" placeholder="Email or Phone Number" />
+            <button>Create</button>
+            
+        </div>    
+    </form>
+        
 </body>
 </html>
