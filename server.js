@@ -66,7 +66,7 @@ mongoose.connect(keys.mongodb.dbURI, () => {
 
 // set up routes
 app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes);
+app.use('/logged', profileRoutes);
 
 // create home route
 app.get('/', (req, res) => {
