@@ -4,7 +4,6 @@ var methodOverride = require("method-override");
 var exphbs = require("express-handlebars");
 var mysql = require("mysql");
 
-
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const authRoutes = require('./routes/auth-routes');
@@ -12,9 +11,6 @@ const profileRoutes = require('./routes/profile-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
-
-
-
 
 var app = express();
 app.use(bodyParser.urlencoded({
@@ -30,7 +26,7 @@ app.use(express.static("public"));
 var connection = mysql.createConnection({
   host:'localhost',
   user:'root',
-  password:'root',
+  password:'',
   database:'fitness_db'
 });
 
@@ -40,13 +36,13 @@ connection.connect(function(err){
 })
 
 app.get('/',function(req,res){
-  connection.query('SELECT * FROM runners;',function(err,data){
-    res.render('index',{runners:data});
+  connection.query('SELECT * FROM fitness_db;',function(err,data){
+    res.render('index',{fitness:data});
     })
   })
 
   app.post('/create', function(req,res){
-    connection.query('INSERT INTO runners (runner) VALUES (?);', [req.body.methodOverride
+    connection.query('INSERT INTO fitness_db (fitness) VALUES (?);', [req.body.methodOverride
   ], function(err,result){
     if(err)throw err;
     res.redirect('/'); 
