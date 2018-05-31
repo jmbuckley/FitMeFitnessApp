@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="/js/jquery.min.js"></script>
     <title>Login</title>
 </head>
+
 <body>
+
     {{{body}}}       
+
+    <form class="login-page">
+        <div class="form">
+            <input type="text" placeholder="username" name="userid" />
+            <input type="text" placeholder="password" name="paswrd" />
+            <input class="text" placeholder="Email or Phone Number" />
+            <button>Create</button>
+
+            {{#if user}}
+            <div class="btn white darken-4 col s10 m4">
+                <a href="/auth/logout" style="text-transform:none">
+                    <div class="left">
+                        <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                        />
+                    </div>
+                    Log out
+                </a>
+                <p>you are logged in</p>
+                <p>user name :{{user.username}}</p>
+                 <p>google ID :{{user.id}}</p>
+            </div>
+
+            {{else}}
+                  <div class="btn white darken-4 col s10 m4">
+                <a href="/auth/google" style="text-transform:none">
+                    <div class="left">
+                        <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                        />
+                    </div>
+                    Login in with Google
+                </a>
+            </div>
+            {{/if}}
+
+           
+        </div>
+    </form>
+
 </body>
+
 </html>
