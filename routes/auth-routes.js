@@ -7,7 +7,8 @@ router
     }))
     .get("/google/callback",
     passport.authenticate('google',{failureRedirect: "/"}),
-    (req,res,next) => res.redirect("/"))
+    (req,res,next) => res.redirect("/logged"))
+    // (req,res,next) => res.redirect("/"))
 
 
 // // auth login
