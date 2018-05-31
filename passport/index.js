@@ -19,24 +19,24 @@ const GoogleCreds = {
 
 passport.use(new GoogleStrategy(GoogleCreds,
   (accessToken, refreshToken, profile, cb) => {
-    const searchConditions={
-        $or: [
-          { email: profile.emails[0].value},
-          { google_id: profile.id.toString()}
-        ]
-    };
+    // const searchConditions={
+    //     $or: [
+    //       { email: profile.emails[0].value},
+    //       { google_id: profile.id.toString()}
+    //     ]
+    // };
 
-    const newUser = {
-      email: profile.emails[0].value,
-      google_id: profile.id.toString(),
-      username: profile.displayName
-    }
+    // const newUser = {
+    //   email: profile.emails[0].value,
+    //   google_id: profile.id.toString(),
+    //   username: profile.displayName
+    // }
 
-    users
-      .findOrCreate({where: searchConditions, defaults: newUser})
-      .spread((user,created)=>cb(null,user))
+    // users
+    //   .findOrCreate({where: searchConditions, defaults: newUser})
+    //   .spread((user,created)=>cb(null,user))
 
-    // return cb(null,profile)
+    return cb(null,profile)
 }))
 
 // passport.use(new TwitterStrategy(TwitterCreds,

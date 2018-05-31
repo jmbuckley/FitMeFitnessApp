@@ -10,7 +10,7 @@ var exphbs = require("express-handlebars");
 // const cookieSession = require('cookie-session');
 const passport = require('./passport');
 const authRoutes = require('./routes/auth-routes');
-const profileRoutes = require('./routes/profile-routes');
+// const profileRoutes = require('./routes/profile-routes');
 // const mongoose = require('mongoose');
 // const keys = require('./config/keys');
 const models = require("./models").sequelize;
@@ -47,7 +47,7 @@ app.use(passport.session());
 //     res.render('index',{fitness:data});
 //     })
 //   })
-// app.use('/auth', authRoutes);
+app.use('/auth', authRoutes);
 // app.use('/logged', profileRoutes);
 
 // create home route
