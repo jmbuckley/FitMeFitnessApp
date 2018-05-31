@@ -7,6 +7,7 @@ var mysql = require("mysql");
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const authRoutes = require('./routes/auth-routes');
+const routes = require('./routes/routes');
 const profileRoutes = require('./routes/profile-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
@@ -26,7 +27,7 @@ app.use(express.static("public"));
 var connection = mysql.createConnection({
   host:'localhost',
   user:'root',
-  password:'',
+  password:'root',
   database:'fitness_db'
 });
 
@@ -58,6 +59,8 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// // require app routing app
+// require('./app/routing/html-routes.js')(app);
 
 // connect to mongodb
 mongoose.connect(keys.mongodb.dbURI, () => {
@@ -66,7 +69,8 @@ mongoose.connect(keys.mongodb.dbURI, () => {
 
 // set up routes
 app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes);
+// app.use('/profile', profileRoutes);
+// app.use('/logged', routes);
 
 // create home route
 app.get('/', (req, res) => {
