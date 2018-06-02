@@ -22,6 +22,7 @@ CREATE TABLE users
     user_name varchar(100),
     user_Email varchar(100),
     user_password varchar(100),
+    google_id varchar(100),
     PRIMARY KEY (user_ID)
 );
 
