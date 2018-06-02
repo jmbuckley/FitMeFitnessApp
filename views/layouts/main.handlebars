@@ -1,24 +1,54 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html>
 <head>
-    <meta name="viewport" content="width=device-width">
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Login</title>
+	<title>Fitness Me</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-
 <body>
+	<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            {{#if user}}
+              <li role="presentation"><a href="/">Dashboard</a></li>
+              <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
+              <li role="presentation"><a href="/auth/google">Login with google+</a></li>
+              <li role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+            <li role="presentation"><a href="/logged">Log Out</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Fitness Me</h3>
+      </div>
 
-    {{{ body }}}
 
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>
+
+        
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2018 Prestige Worldwide, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
 </body>
-
 </html>

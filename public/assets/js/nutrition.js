@@ -4,10 +4,10 @@ var foodSearchButton = $("#run-search");
 
 foodSearchButton.on("click",(event)=>{
   event.preventDefault()
-  $.get("https://api.nutritionix.com/v1_1/search/" + foodSearch + "?results=0%3A5&cal_min=0&cal_max=50000&fields=*&appId=c3847b45&appKey=f087aae61620658bc2208ab8ecf85f99" ).then(
+  $.get("https://api.nutritionix.com/v1_1/search/" + foodSearch + "?results=0%3A5&cal_min=0&cal_max=50000&fields=*&appId=c3847b45&appKey=86b522baedffd884b5ae4c24190abf6c" ).then(
     data=>{
       updatePage(data)
-      // console.log(data)
+      console.log(data)
     }
   )})
   
