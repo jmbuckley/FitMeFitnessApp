@@ -1,5 +1,5 @@
 var request = require("request");
-var foodSearch = $("#search-term");
+var foodSearch = "starbucks";
 
 // Then run a request to the NutritionIX API with the food specified
 request("https://api.nutritionix.com/v1_1/search/" + foodSearch + "?results=0%3A5&cal_min=0&cal_max=50000&fields=*&appId=c3847b45&appKey=f087aae61620658bc2208ab8ecf85f99", function(error, response, body) {
@@ -44,31 +44,31 @@ function updatePage(nutritionixData) {
     );
   }
 }
-// function to empty the search
-function clear() {
-  $("#well-section").empty();
-}
-// CLICK HANDLERS
-// ==========================================================
-$("#run-search").on("click", function(event) {
-  // This line allows us to take advantage of the HTML "submit" property
-  // This way we can hit enter on the keyboard and it registers the search
-  // (in addition to clicks). Prevents the page from reloading on form submit.
-  event.preventDefault();
+// // function to empty the search
+// function clear() {
+//   $("#well-section").empty();
+// }
+// // CLICK HANDLERS
+// // ==========================================================
+// $("#run-search").on("click", function(event) {
+//   // This line allows us to take advantage of the HTML "submit" property
+//   // This way we can hit enter on the keyboard and it registers the search
+//   // (in addition to clicks). Prevents the page from reloading on form submit.
+//   event.preventDefault();
 
-  // empty the region associated with the articles
-  clear();
+//   // empty the region associated with the articles
+//   clear();
 
-  // build the query URL for the ajax request to the NYT API
-  var queryURL = buildQueryURL();
+//   // build the query URL for the ajax request to the NYT API
+//   var queryURL = buildQueryURL();
 
-  // make the AJAX request to the API - GETs the JSON data at the queryURL.
-  // the data then gets passed as an argument to the updatePage function
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(updatePage);
-});
+//   // make the AJAX request to the API - GETs the JSON data at the queryURL.
+//   // the data then gets passed as an argument to the updatePage function
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   }).then(updatePage);
+// });
 
-//  .on("click") function associated with the clear button
-$("#clear-all").on("click", clear);
+// //  .on("click") function associated with the clear button
+// $("#clear-all").on("click", clear);

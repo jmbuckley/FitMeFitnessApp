@@ -17,4 +17,14 @@ router
   res.render("logged");
 })
 
+.get("/nutrition", function (req, res) {
+  console.log()
+  res.render("nutrition");
+})
+
+.get("/history", function (req, res) {
+  console.log()
+  res.render("history");
+})
+
 module.exports = router

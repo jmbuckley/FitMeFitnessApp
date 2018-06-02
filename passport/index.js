@@ -10,31 +10,24 @@ const GoogleCreds = {
   callbackURL: process.env.GOOGLE_CB_URL
 }
 
-// const TwitterCreds={
-//   consumerKey: process.env.TWITTER_CONSUMER_KEY,
-//   consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-//   userProfileURL: process.env.TWITTTER_USER_EMAIL,
-//   callbackURL: process.env.TWITTER_CALLBACK_URL
-// }
-
 passport.use(new GoogleStrategy(GoogleCreds,
   (accessToken, refreshToken, profile, cb) => {
-    // const searchConditions={
-    //     $or: [
-    //       { email: profile.emails[0].value},
-    //       { google_id: profile.id.toString()}
-    //     ]
-    // };
+    const searchConditions={
+        $or: [
+          { email: profile.emails[0].value},
+          { google_id: profile.id.toString()}
+        ]
+    };
 
-    // const newUser = {
-    //   email: profile.emails[0].value,
-    //   google_id: profile.id.toString(),
-    //   username: profile.displayName
-    // }
+    const newUser = {
+      email: profile.emails[0].value,
+      google_id: profile.id.toString(),
+      username: profile.displayName
+    }
 
-    // users
-    //   .findOrCreate({where: searchConditions, defaults: newUser})
-    //   .spread((user,created)=>cb(null,user))
+    users
+      .findOrCreate({where: searchConditions, defaults: newUser})
+      .spread((user,created)=>cb(null,user))
 
     return cb(null,profile)
 }))
